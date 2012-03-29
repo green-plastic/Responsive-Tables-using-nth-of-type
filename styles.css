@@ -34,10 +34,10 @@ h1, h2, h3, h4, h5, h6 { margin: 1em 0; line-height: 1em;}
 h1 { font-size: 3em; }
 h1 .small { font-size: 0.4em; display: block; }
 h1 a { text-decoration: none }
-h2 { font-size: 1.5em; color: #000000; }
+h2 { text-align: center; font-size: 1.5em; color: #000000; }
 h3 { text-align: center; color: #000000; }
 a { color: #000000; }
-.description { font: italic 1.2em Georgia, serif; margin-bottom: 30px; margin-top: 30px; }
+.description { font: italic 1.07em/1.5em Georgia, serif; margin-bottom: 30px; margin-top: 30px; }
 pre { background: #000; color: #fff; padding: 15px;}
 hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 .footer { text-align:center; padding-top:30px; font-style: italic; }
@@ -66,7 +66,7 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 		display: block; 
 		font: bold 1.25em/1em Georgia, serif;
 		padding: 6px 0;
-		background: #555;
+		background: #006699;
 		border: none;
 		color: #FFF;
 		text-align: center;
@@ -93,7 +93,7 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 	}
 	.table tbody tr td:nth-of-type(n):before
 	{
-		background: #212121;
+		background: #528FAE;
 		color: #FFF;
 		font-weight: bold;
 		display: block;
@@ -101,7 +101,7 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 		margin-bottom: 5px;
 	}
 	.table tbody tr td span {
-		background: #212121;
+		background: #528FAE;
 		color: #FFF;
 		font-weight: bold;
 		display: block;
@@ -121,8 +121,8 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 @media screen and (min-width: 600px) {	
 
 	.table thead th {
-		background: #212121;
-		border: 1px solid #000;
+		background: #528FAE;
+		border: 1px solid #366075;
 		font: bold 1em/1em Georgia, serif;
 		color: #FFF;
 		padding: 10px;
@@ -134,7 +134,7 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 		font: 1em/1.5em Helvetica, Arial, sans-serif;
 		border: 1px solid #DDD;
 	}
-	.table tbody th { background: #555; color: #FFF; border: 1px solid #333; }
+	.table tbody th { background: #006699; color: #FFF; border: 1px solid #00486C; }
 	.table tbody tr th { text-align: right; padding-right: 10px; font-weight: normal; }
 	.table tbody tr td {
 		padding: 5px;
