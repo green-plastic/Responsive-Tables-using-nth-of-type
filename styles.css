@@ -48,78 +48,78 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 	text-align: center;
 	margin-bottom: 2em;
 }
-
-@media screen and (max-width: 600px) {
-	
-	.table thead {
-		position: absolute;
-		left: -9999em;
-		top: -9999em;
-		display: block;
-	}
-	.table tbody {
-		font: 1em/1.5em Helvetica, Arial, sans-serif;
-		display: block;
-		margin: 0;
-	}
-	.table tbody th { 
-		display: block; 
-		font: bold 1.25em/1em Georgia, serif;
-		padding: 6px 0;
-		background: #006699;
-		border: none;
-		color: #FFF;
-		text-align: center;
-	}
-	.table tbody tr {
-		margin-bottom: 1em;
-		display: block;
-		width: 100%;
-		border: none;
-		border-bottom: 1px solid #DDD;
-		float: left;
-	}
-	.table tbody tr:last-child {
-		border-bottom: 1px solid #DDD;
-	}
-	.table tbody tr td {
-		display: block;
-		float: left;
-		width: 20%;
-		padding: 0 0 5px 0;
-	}
-	.table tbody tr td:last-child {
-		border: none;
-	}
-	.table tbody tr td:nth-of-type(n):before
-	{
-		background: #528FAE;
-		color: #FFF;
-		font-weight: bold;
-		display: block;
-		padding: 5px 0;
-		margin-bottom: 5px;
-	}
-	.table tbody tr td span {
-		background: #528FAE;
-		color: #FFF;
-		font-weight: bold;
-		display: block;
-		padding: 5px 0;
-		margin-bottom: 5px;
-	}
-	
-	/* CSS Only Version needs to have the headers hard coded in */
-	#css td:nth-of-type(1):before { content: "Header 1"; }
-	#css td:nth-of-type(2):before { content: "Header 2"; }
-	#css td:nth-of-type(3):before { content: "Header 3"; }
-	#css td:nth-of-type(4):before { content: "Header 4"; }
-	#css td:nth-of-type(5):before { content: "Header 5"; }
+.table thead {
+	position: absolute;
+	left: -9999em;
+	top: -9999em;
+	display: block;
 }
+.table tbody {
+	font: 1em/1.5em Helvetica, Arial, sans-serif;
+	display: block;
+	margin: 0;
+}
+.table tbody th { 
+	display: block; 
+	font: bold 1.25em/1em Georgia, serif;
+	padding: 6px 0;
+	background: #006699;
+	border: none;
+	color: #FFF;
+	text-align: center;
+}
+.table tbody tr {
+	margin-bottom: 1em;
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #DDD;
+	float: left;
+}
+.table tbody tr:last-child {
+	border-bottom: 1px solid #DDD;
+}
+.table tbody tr td {
+	display: block;
+	float: left;
+	width: 20%;
+	padding: 0 0 5px 0;
+}
+.table tbody tr td:last-child {
+	border: none;
+}
+.table tbody tr td:nth-of-type(n):before
+{
+	background: #528FAE;
+	color: #FFF;
+	font-weight: bold;
+	display: block;
+	padding: 5px 0;
+	margin-bottom: 5px;
+}
+.table tbody tr td span {
+	background: #528FAE;
+	color: #FFF;
+	font-weight: bold;
+	display: block;
+	padding: 5px 0;
+	margin-bottom: 5px;
+}
+/* CSS Only Version needs to have the headers hard coded in */
+#css tbody tr td:nth-of-type(1):before { content: "Header 1"; }
+#css tbody tr td:nth-of-type(2):before { content: "Header 2"; }
+#css tbody tr td:nth-of-type(3):before { content: "Header 3"; }
+#css tbody tr td:nth-of-type(4):before { content: "Header 4"; }
+#css tbody tr td:nth-of-type(5):before { content: "Header 5"; }
+
 
 
 @media screen and (min-width: 600px) {	
-
+	
+	.table thead {
+		position: relative;
+		display: table-header-group;
+	}
 	.table thead th {
 		background: #528FAE;
 		border: 1px solid #366075;
@@ -129,20 +129,51 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 		width: 16.666%;
 		text-align: center;
 	}
-	.table thead th:first-child { background: #FFF; border: none; }
+	.table thead th:first-child { 
+		background: #FFF; 
+		border: none; 
+	}
 	.table tbody {
 		font: 1em/1.5em Helvetica, Arial, sans-serif;
 		border: 1px solid #DDD;
+		display: table-row-group;
 	}
-	.table tbody th { background: #006699; color: #FFF; border: 1px solid #00486C; }
-	.table tbody tr th { text-align: right; padding-right: 10px; font-weight: normal; }
+	.table tbody th { 
+		background: #006699; 
+		color: #FFF; 
+		border: 1px solid #00486C; 
+	}
+	.table tbody tr { 
+		display: table-row; 
+		float: none; 
+	}
+	.table tbody tr th { 
+		text-align: right; 
+		padding-right: 10px; 
+		font-weight: normal; 
+		display: table-cell; 
+	}
 	.table tbody tr td {
 		padding: 5px;
 		border-right: 1px solid #DDD;
+		display: table-cell;
+		float: none;
+		width: auto;
 	}
 	.table tbody tr td:last-child{ border-right: none; }
 	.table tbody tr:nth-child(2n) td, .table tbody tr:nth-child(2n) {
 		background: #F1F1F1;
+	}
+	#css tbody tr td span { 
+		background: none;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	#css tbody tr td:nth-of-type(n):before { 
+		content: "";
+		background: none;
+		padding: 0;
+		margin-bottom: 0;
 	}
 	
 }
