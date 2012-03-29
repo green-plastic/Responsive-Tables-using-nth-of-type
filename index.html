@@ -31,7 +31,11 @@
 
 
 	
-	<h3>CSS Only Version</h3>
+	<h2>CSS Only Version</h2>
+	
+	<div class="description">
+		The table headers are hard coded in the CSS using <strong>nth-of-type(n):before</strong>. I'm sure you could use some server side action to dynamically create the tables and/or CSS. If you want a more dynamic approach, try the <a href="#js">jQuery version below</a>.
+    </div>
 	
 	<table id="css" class="table">
 		<thead>
@@ -130,7 +134,7 @@
 	
 	<hr />
 	
-	<h3>CSS and jQuery Version, doesn't nth-of-type</h3>
+	<h2>CSS and jQuery Version, doesn't use nth-of-type</h2>
 	
 	<div class="description">The jQuery version loops through and grabs the text from the header tags in the header group. From there loops through the rows and prepends the table headers to the columns. A refresh is needed if resizing your browser.</div>
 	
