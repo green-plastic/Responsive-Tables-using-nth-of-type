@@ -29,16 +29,16 @@ body {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 { margin: 1em 0; line-height: 1em;}
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1em; color: #000000; }
 
 h1 { font-size: 3em; }
 h1 .small { font-size: 0.4em; display: block; }
 h1 a { text-decoration: none }
-h2 { text-align: center; font-size: 1.5em; color: #000000; }
-h3 { text-align: center; color: #000000; }
+h2 { text-align: center; font-size: 1.5em; }
+h3, h4 { text-align: center; }
 a { color: #000000; }
-.description { font: italic 1.07em/1.5em Georgia, serif; margin-bottom: 30px; margin-top: 30px; }
-pre { background: #000; color: #fff; padding: 15px;}
+.description { font: normal 1.07em/1.5em Georgia, serif; margin-bottom: 30px; margin-top: 30px; }
+pre { font-size: 1em; background: #cc3333; color: #fff; padding: 10px; white-space: pre;  white-space: pre-wrap;  white-space: pre-line;  word-wrap: break-word; }
 hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 .footer { text-align:center; padding-top:30px; font-style: italic; }
 .fork { position: absolute; top: 0; right: 0; border: 0; z-index: 9999; }
@@ -68,6 +68,8 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 	color: #FFF;
 	text-align: center;
 }
+#css2 tbody th { background: #339966; }
+#js tbody th { background: #CC3333; }
 .table tbody tr {
 	margin-bottom: 1em;
 	display: block;
@@ -88,8 +90,7 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 .table tbody tr td:last-child {
 	border: none;
 }
-.table tbody tr td:nth-of-type(n):before
-{
+.table tbody tr td:nth-of-type(n):before {
 	background: #528FAE;
 	color: #FFF;
 	font-weight: bold;
@@ -97,8 +98,11 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 	padding: 5px 0;
 	margin-bottom: 5px;
 }
+#css2 tbody tr td:nth-of-type(n):before { background: #6EC197; }
+	
+/* This for the jQuery version, since span is used */
 .table tbody tr td span {
-	background: #528FAE;
+	background: #D56565;
 	color: #FFF;
 	font-weight: bold;
 	display: block;
@@ -111,6 +115,9 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 #css tbody tr td:nth-of-type(3):before { content: "Header 3"; }
 #css tbody tr td:nth-of-type(4):before { content: "Header 4"; }
 #css tbody tr td:nth-of-type(5):before { content: "Header 5"; }
+
+/* 2nd CSS version using a microformat attribute on all the cells. */
+#css2 tbody tr td:nth-of-type(n):before { content: attr(data-label); }
 
 
 
@@ -129,7 +136,9 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 		width: 16.666%;
 		text-align: center;
 	}
-	.table thead th:first-child { 
+	#css2 thead th { background: #6EC197; border: 1px solid #339966; }
+	#js thead th { background: #D56565; border: 1px solid #CC3333; }
+	.table thead th:first-child, #css2 thead th:first-child, #js thead th:first-child { 
 		background: #FFF; 
 		border: none; 
 	}
@@ -142,6 +151,16 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 		background: #006699; 
 		color: #FFF; 
 		border: 1px solid #00486C; 
+	}
+	#css2 tbody th { 
+		background: #339966; 
+		color: #FFF; 
+		border: 1px solid #00486C; 
+	}
+	#js tbody th { 
+		background: #CC3333; 
+		color: #FFF; 
+		border: 1px solid #782C2C; 
 	}
 	.table tbody tr { 
 		display: table-row; 
@@ -164,12 +183,13 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; margin: 2em auto; }
 	.table tbody tr:nth-child(2n) td, .table tbody tr:nth-child(2n) {
 		background: #F1F1F1;
 	}
-	#css tbody tr td span { 
+	.table tbody tr td span { 
 		background: none;
 		padding: 0;
 		margin-bottom: 0;
 	}
-	#css tbody tr td:nth-of-type(n):before { 
+	#css tbody tr td:nth-of-type(n):before,
+	#css2 tbody tr td:nth-of-type(n):before { 
 		content: "";
 		background: none;
 		padding: 0;

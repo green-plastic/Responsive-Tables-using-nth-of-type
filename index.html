@@ -31,10 +31,11 @@
 
 
 	
-	<h2>CSS Only Version</h2>
+	<h2>CSS Only Version 1</h2>
+	<h4>(Hard coded values in CSS)</h4>
 	
 	<div class="description">
-		The table headers are hard coded in the CSS using <strong>nth-of-type(n):before</strong>. I'm sure you could use some server side action to dynamically create the tables and/or CSS. If you want a more dynamic approach, try the <a href="#js">jQuery version below</a>.
+		The table headers are hard coded in the CSS using <em>nth-of-type(n):before</em>. I'm sure you could use some server side action to dynamically create the tables and/or CSS. If you want a more dynamic approach, try the <a href="#js">jQuery version below</a>.
     </div>
 	
 	<table id="css" class="table">
@@ -97,37 +98,82 @@
 				<td>Info 4</td>
 				<td>Info 5</td>
 	 		</tr>
+		</tbody>
+	</table>
+	
+	<hr />
+	
+	<h2>CSS Only Version 2</h2>
+	<h4>(Hard coded values as data attributes in markup)</h4>
+	
+	<div class="description">
+		<p>This uses nth-of-type and a data attribute <em>(data-label)</em> to achieve what is done above. This one still uses <em>nth-of-type(n):before</em>, however, using the attibute <em>data-label</em> attached to each td tag, we only need one line in the styles to grab the content. Like so:</p>
+		<br />
+		<pre>td:nth-of-type(n):before { content: attr(data-label); }</pre>
+		
+    </div>
+
+	
+	
+	<table id="css2" class="table">
+		<thead>
+	   		<tr>
+     			<th></th>
+				<th>Header 1</th>
+				<th>Header 2</th>
+				<th>Header 3</th>
+				<th>Header 4</th>
+				<th>Header 5</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Row Header 1</th>
+				<td data-label="Header 1">Info 1</td>
+				<td data-label="Header 2">Info 2</td>
+				<td data-label="Header 3">Info 3</td>
+				<td data-label="Header 4">Info 4</td>
+				<td data-label="Header 5">Info 5</td>
+			</tr>
+			<tr>
+				<th>Row Header 2</th>
+				<td data-label="Header 1">Info 1</td>
+				<td data-label="Header 2">Info 2</td>
+				<td data-label="Header 3">Info 3</td>
+				<td data-label="Header 4">Info 4</td>
+				<td data-label="Header 5">Info 5</td>
+	  		</tr>
 	 		<tr>
-	   			<th>Row Header 7</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
+	   			<th>Row Header 3</th>
+				<td data-label="Header 1">Info 1</td>
+				<td data-label="Header 2">Info 2</td>
+				<td data-label="Header 3">Info 3</td>
+				<td data-label="Header 4">Info 4</td>
+				<td data-label="Header 5">Info 5</td>
 	 		</tr>
 	 		<tr>
-	   			<th>Row Header 8</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
+	   			<th>Row Header 4</th>
+				<td data-label="Header 1">Info 1</td>
+				<td data-label="Header 2">Info 2</td>
+				<td data-label="Header 3">Info 3</td>
+				<td data-label="Header 4">Info 4</td>
+				<td data-label="Header 5">Info 5</td>
 	 		</tr>
 	 		<tr>
-	   			<th>Row Header 9</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
+	   			<th>Row Header 5</th>
+				<td data-label="Header 1">Info 1</td>
+				<td data-label="Header 2">Info 2</td>
+				<td data-label="Header 3">Info 3</td>
+				<td data-label="Header 4">Info 4</td>
+				<td data-label="Header 5">Info 5</td>
 	 		</tr>
 	 		<tr>
-	   			<th>Row Header 10</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
+	   			<th>Row Header 6</th>
+				<td data-label="Header 1">Info 1</td>
+				<td data-label="Header 2">Info 2</td>
+				<td data-label="Header 3">Info 3</td>
+				<td data-label="Header 4">Info 4</td>
+				<td data-label="Header 5">Info 5</td>
 	 		</tr>
 		</tbody>
 	</table>
@@ -192,38 +238,6 @@
 	 		</tr>
 	 		<tr>
 	   			<th>Row Header 6</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
-	 		</tr>
-	 		<tr>
-	   			<th>Row Header 7</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
-	 		</tr>
-	 		<tr>
-	   			<th>Row Header 8</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
-	 		</tr>
-	 		<tr>
-	   			<th>Row Header 9</th>
-				<td>Info 1</td>
-				<td>Info 2</td>
-				<td>Info 3</td>
-				<td>Info 4</td>
-				<td>Info 5</td>
-	 		</tr>
-	 		<tr>
-	   			<th>Row Header 10</th>
 				<td>Info 1</td>
 				<td>Info 2</td>
 				<td>Info 3</td>
