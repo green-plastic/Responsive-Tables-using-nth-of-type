@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+
+	<meta charset="UTF-8">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Responsive tables using nth-of-type</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+	
+
+<div class="container">
+	
+	<h2>Here's my version of a responsive table using nth-of-type</h2>
+	
+	<h3>CSS Only Version</h3>
+	
+	<table id="css" class="table">
+		<thead>
+	   		<tr>
+     			<th></th>
+				<th>Header 1</th>
+				<th>Header 2</th>
+				<th>Header 3</th>
+				<th>Header 4</th>
+				<th>Header 5</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Row Header 1</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+			</tr>
+			<tr>
+				<th>Row Header 2</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	  		</tr>
+	 		<tr>
+	   			<th>Row Header 3</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 4</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 5</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 6</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 7</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 8</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 9</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 10</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+		</tbody>
+	</table>
+	
+	<hr />
+	
+	<h3>CSS and jQuery Version, not really nth-of-type :-|</h3>
+	<h4>When resizing the browser, needs to be refreshed to see the headers</h4>
+	
+	<table id="js" class="table">
+		<thead>
+	   		<tr>
+     			<td></td>
+				<th>Header 1</th>
+				<th>Header 2</th>
+				<th>Header 3</th>
+				<th>Header 4</th>
+				<th>Header 5</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Row Header 1</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+			</tr>
+			<tr>
+				<th>Row Header 2</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	  		</tr>
+	 		<tr>
+	   			<th>Row Header 3</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 4</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 5</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 6</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 7</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 8</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 9</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+	 		<tr>
+	   			<th>Row Header 10</th>
+				<td>Info 1</td>
+				<td>Info 2</td>
+				<td>Info 3</td>
+				<td>Info 4</td>
+				<td>Info 5</td>
+	 		</tr>
+		</tbody>
+	</table>
+	
+</div>
+	
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		// loop through the #js table
+	    $('#js').each(function() {
+			// Check if under 600px width
+	        if ( window.innerWidth < 615 || screen.width < 600 ) {
+				
+				// table selector to variable
+	            var table = $(this);
+				
+				// loop through the thead table headers
+	            $('thead th', table).each(function(num) {
+					
+					// set the text from the thead headers to a variable
+	                var header = $(this).text();
+					
+					// loop through the tbody rows
+	                $('tbody tr', table).each(function() {
+						
+						// prepend the header text to each column
+						// I put it in a span tag so I could style it.
+	                    $('td', this).eq(num).prepend('<span>' + header + '</span>');
+
+	                });             
+	            });
+	        }
+	     });
+
+	});
+</script>	
+	
+</body>
+</html>
