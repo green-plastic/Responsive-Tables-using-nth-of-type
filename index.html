@@ -13,11 +13,23 @@
 </head>
 
 <body>
-	
+
+<a href="https://github.com/green-plastic/Responsive-Tables-using-nth-of-type" class="fork">
+	<img src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
 
 <div class="container">
 	
-	<h2>Here's my version of a responsive table using nth-of-type</h2>
+		<h1>
+			<a href="https://github.com/green-plastic/Responsive-Tables-using-nth-of-type">Responsive tables using nth-of-type</a>
+      <span class="small">by <a href="https://github.com/green-plastic">Erik Wiedeman</a></span>
+		</h1>
+
+    <div class="description">
+      Using nth-of-type, this table becomes responsive. Also have a jQuery version, which doesn't use nth-of-type, but rather loops through the table and grabs the th text from the table header.
+    </div>
+
+
 	
 	<h3>CSS Only Version</h3>
 	
@@ -118,8 +130,9 @@
 	
 	<hr />
 	
-	<h3>CSS and jQuery Version, not really nth-of-type :-|</h3>
-	<h4>When resizing the browser, needs to be refreshed to see the headers</h4>
+	<h3>CSS and jQuery Version, doesn't nth-of-type</h3>
+	
+	<div class="description">The jQuery version loops through and grabs the text from the header tags in the header group. From there loops through the rows and prepends the table headers to the columns. A refresh is needed if resizing your browser.</div>
 	
 	<table id="js" class="table">
 		<thead>
@@ -231,10 +244,10 @@
 				// table selector to variable
 	            var table = $(this);
 				
-				// loop through the thead table headers
+				// loop through the header group table headers
 	            $('thead th', table).each(function(num) {
 					
-					// set the text from the thead headers to a variable
+					// set the text from the table headers to a variable
 	                var header = $(this).text();
 					
 					// loop through the tbody rows
