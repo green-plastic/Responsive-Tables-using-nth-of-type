@@ -240,32 +240,36 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		
-		// loop through the #js table
-	    $('#js').each(function() {
-			// Check if under 600px width
-	        if ( window.innerWidth < 615 || screen.width < 600 ) {
+		function loopTable() {
+			// loop through the #js table
+		    $('#js').each(function() {
+				// Check if under 600px width
+		        if ( window.innerWidth < 600 || screen.width < 600 ) {
 				
-				// table selector to variable
-	            var table = $(this);
+					// table selector to variable
+		            var table = $(this);
 				
-				// loop through the header group table headers
-	            $('thead th', table).each(function(num) {
+					// loop through the header group table headers
+		            $('thead th', table).each(function(num) {
 					
-					// set the text from the table headers to a variable
-	                var header = $(this).text();
+						// set the text from the table headers to a variable
+		                var header = $(this).text();
 					
-					// loop through the tbody rows
-	                $('tbody tr', table).each(function() {
+						// loop through the tbody rows
+		                $('tbody tr', table).each(function() {
 						
-						// prepend the header text to each column
-						// I put it in a span tag so I could style it.
-	                    $('td', this).eq(num).prepend('<span>' + header + '</span>');
+							// prepend the header text to each column
+							// I put it in a span tag so I could style it.
+		                    $('td', this).eq(num).prepend('<span>' + header + '</span>');
 
-	                });             
-	            });
-	        }
-	     });
+		                });             
+		            });
+		        }
+		     });
+		}
 		
+		// inital call of the loop using a function... less code clutter then.
+		loopTable();
 		
 		// this is for resizing the browser
 		$(window).resize(function() {
@@ -273,31 +277,7 @@
 			// check to see if the dynamically created span is there, if not loop through
 			if ( $('tbody tr td span').length <= 0 && window.innerWidth < 600 ) {
 			
-				// loop through the #js table
-			    $('#js').each(function() {
-					// Check if under 600px width
-			        if ( window.innerWidth < 615 || screen.width < 600 ) {
-				
-						// table selector to variable
-			            var table = $(this);
-				
-						// loop through the header group table headers
-			            $('thead th', table).each(function(num) {
-					
-							// set the text from the table headers to a variable
-			                var header = $(this).text();
-					
-							// loop through the tbody rows
-			                $('tbody tr', table).each(function() {
-						
-								// prepend the header text to each column
-								// I put it in a span tag so I could style it.
-			                    $('td', this).eq(num).prepend('<span>' + header + '</span>');
-
-			                });             
-			            });
-			        }
-			     });
+				loopTable();
 			
 			// if there is a dynamically created span, and the window width is greater than 600, remove them.
 			} else if ( $('tbody tr td span').length > 0 && window.innerWidth > 600 ) {
