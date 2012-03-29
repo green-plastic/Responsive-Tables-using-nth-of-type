@@ -19,7 +19,7 @@
 </a>
 
 <div class="container">
-	
+	<div class="test"></div>
 		<h1>
 			<a href="https://github.com/green-plastic/Responsive-Tables-using-nth-of-type">Responsive tables using nth-of-type</a>
       <span class="small">by <a href="https://github.com/green-plastic">Erik Wiedeman</a></span>
@@ -136,7 +136,7 @@
 	
 	<h2>CSS and jQuery Version, doesn't use nth-of-type</h2>
 	
-	<div class="description">The jQuery version loops through and grabs the text from the header tags in the header group. From there loops through the rows and prepends the table headers to the columns. A refresh is needed if resizing your browser.</div>
+	<div class="description">The jQuery version loops through and grabs the text from the header tags in the header group. From there loops through the rows and prepends the table headers to the columns.</div>
 	
 	<table id="js" class="table">
 		<thead>
@@ -265,6 +265,47 @@
 	            });
 	        }
 	     });
+		
+		
+		// this is for resizing the browser
+		$(window).resize(function() {
+			
+			// check to see if the dynamically created span is there, if not loop through
+			if ( $('tbody tr td span').length <= 0 && window.innerWidth < 600 ) {
+			
+				// loop through the #js table
+			    $('#js').each(function() {
+					// Check if under 600px width
+			        if ( window.innerWidth < 615 || screen.width < 600 ) {
+				
+						// table selector to variable
+			            var table = $(this);
+				
+						// loop through the header group table headers
+			            $('thead th', table).each(function(num) {
+					
+							// set the text from the table headers to a variable
+			                var header = $(this).text();
+					
+							// loop through the tbody rows
+			                $('tbody tr', table).each(function() {
+						
+								// prepend the header text to each column
+								// I put it in a span tag so I could style it.
+			                    $('td', this).eq(num).prepend('<span>' + header + '</span>');
+
+			                });             
+			            });
+			        }
+			     });
+			
+			// if there is a dynamically created span, and the window width is greater than 600, remove them.
+			} else if ( $('tbody tr td span').length > 0 && window.innerWidth > 600 ) {
+				
+				$('tbody tr td span').remove();
+				
+			}
+		});
 
 	});
 </script>	
